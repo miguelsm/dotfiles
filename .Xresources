@@ -1,0 +1,67 @@
+xterm*metaSendsEscape: true
+xterm*faceName: GohuFont
+xterm*faceSize: 14
+xterm*toolBar: false
+xterm*colorBDMode: true
+xterm*boldFont: fixed
+xterm*colorULMode: true
+xterm*termName: xterm-256color
+xterm*locale: true
+xterm*scaleHeight: 1.2
+xterm*selectToClipboard: true
+
+URxvt.scrollstyle: rxvt
+URxvt.scrollBar: false
+!URxvt.font: -gohu-gohufont-medium-r-normal--14-100-100-100-c-80-iso8859-1
+!URxvt.boldFont: -gohu-gohufont-medium-r-normal--14-100-100-100-c-80-iso8859-1
+URxvt.font: xft:Source Code Pro:pixelsize=20
+URxvt.boldFont: xft:Source Code Pro:pixelsize=20
+!URxvt.lineSpace: 3
+URxvt.termName: rxvt-256color
+URxvt.perl-ext-common: default,url-select,resize-font
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: firefox
+URxvt.url-select.underline: true
+URxvt.keysym.C-minus: resize-font:smaller
+URxvt.keysym.C-plus: resize-font:bigger
+URxvt.keysym.C-equal: resize-font:reset
+URxvt.keysym.C-question: resize-font:show
+
+!*dpi: 96
+
+! special
+*.foreground:   #a5a2a2
+*.background:   #000000
+*.cursorColor:  #a5a2a2
+
+! black
+*.color0:       #000000
+*.color8:       #5c5855
+
+! red
+*.color1:       #db2d20
+*.color9:       #db2d20
+
+! green
+*.color2:       #01a252
+*.color10:      #01a252
+
+! yellow
+*.color3:       #fded02
+*.color11:      #fded02
+
+! blue
+*.color4:       #01a0e4
+*.color12:      #01a0e4
+
+! magenta
+*.color5:       #a16a94
+*.color13:      #a16a94
+
+! cyan
+*.color6:       #b5e4f4
+*.color14:      #b5e4f4
+
+! white
+*.color7:       #a5a2a2
+*.color15:      #f7f7f7

@@ -1,0 +1,20 @@
+export PATH=$HOME/bin:$PATH
+export HISTFILE=$HOME/.mksh_history
+export HISTSIZE=100000
+export SAVEHIST=100000
+
+# Avoid duplicates
+export HISTCONTROL=ignoredups:erasedups
+# After each command, append to the history file and reread it
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+export VISUAL="zile"
+export EDITOR="$VISUAL"
+set -o emacs
+
+source $HOME/polyglot.sh
+bind -m '^L=^[^L'
+
+#export TERM=rxvt-256color
+
+alias sdc='rlwrap npx shadow-cljs'

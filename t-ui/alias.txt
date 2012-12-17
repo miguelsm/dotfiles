@@ -1,0 +1,16 @@
+// do not insert random spaces!
+
+st=settings
+d=search -u http://learnersdictionary.com/definition/%
+
+hh=Materialistic
+tt=Goodtime
+
+dd=search -d %
+
+gg=search -u https://google.com/search?q=%
+
+yt=search -yt %
+km=K-9 Mail
+
+ff=Firefox Preview

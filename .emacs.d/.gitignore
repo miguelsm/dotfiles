@@ -1,0 +1,8 @@
+/*
+/*/
+!.gitignore
+!.gitmodules
+!customizations/
+!themes/
+!vendor/
+!init.el

@@ -15,6 +15,15 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Configure swap for hibernate to disk. Swappiness is set low so that it's mainly for
+  # hibernation purposes.
+  swapDevices = [{ device = "/var/swapfile"; size = 8192; }];
+  boot.resumeDevice = "/dev/disk/by-label/nixos";
+  boot.kernelParams = [ "resume_offset=62195712" ];
+  boot.kernel.sysctl = {
+    # Make the kernel reluctant to use swap.
+    "vm.swappiness" = 5;
+  };
 
   networking.hostName = "mi"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

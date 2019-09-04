@@ -20,7 +20,7 @@
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
   boot.kernelModules = [ "snd-seq" "snd-rawmidi" ];
 
-  networking.hostName = "ul30a"; # Define your hostname.
+  networking.hostName = "mi"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary

@@ -23,6 +23,7 @@
     ag
     aggressive-indent
     auto-highlight-symbol
+    base16-theme
     buffer-move
     cider
     clj-refactor

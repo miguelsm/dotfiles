@@ -91,6 +91,7 @@
 (load "setup-js.el")
 (load "setup-css.el")
 (load "setup-java.el")
+(load "setup-org.el")
 
 ;; nov.el
 (load "setup-nov.el")

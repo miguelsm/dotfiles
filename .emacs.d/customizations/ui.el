@@ -28,14 +28,8 @@
 ;; Color Themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
-(load-theme 'base16-atelier-estuary-light t)
-(custom-theme-set-faces
- 'base16-atelier-estuary-light
- `(font-lock-doc-face ((t (:foreground "#ae7313"))))
- `(linum ((t (:background "#f4f3ec" :foreground "#878573"))))
- `(mode-line ((t (:background "#e7e6df" :foreground "#6c6b5a" :box nil))))
- `(mode-line-inactive ((t (:background "#f4f3ec" :foreground "#878573" :box nil)))))
-(setq fci-rule-color "#e7e6df")
+(load-theme 'acme t)
+(setq fci-rule-color "#dee0c7")
 
 ;; (load-theme 'alabaster t)
 ;; (setq fci-rule-color "#f0f0f0")

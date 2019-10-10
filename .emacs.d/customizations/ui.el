@@ -19,7 +19,7 @@
 ;; Highlight column 80
 (add-hook 'prog-mode-hook 'fci-mode)
 (setq fci-rule-column 80)
-(setq fci-rule-width 4)
+(setq fci-rule-width 1)
 
 ;; Don't show native OS scroll bars for buffers because they're redundant
 (when (fboundp 'scroll-bar-mode)

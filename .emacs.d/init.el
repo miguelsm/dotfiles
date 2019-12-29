@@ -33,6 +33,7 @@
     eterm-256color
     exwm
     google-this
+    helm
     highlight-numbers
     hydra
     ido-ubiquitous
@@ -57,6 +58,7 @@
 ;; Place downloaded elisp files in ~/.emacs.d/vendor
 (add-to-list 'load-path "~/.emacs.d/vendor")
 (require 'fill-column-indicator)
+(require 'helm-xstarter)
 
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.

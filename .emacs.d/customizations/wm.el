@@ -46,3 +46,5 @@
 (setq browse-url-firefox-arguments '("-new-window"))
 
 (desktop-environment-mode)
+
+(global-set-key (kbd "s-&") 'helm-xstarter)

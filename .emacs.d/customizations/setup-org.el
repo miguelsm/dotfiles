@@ -1,3 +1,5 @@
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
 ;; https://emacs.stackexchange.com/a/12844/19224
 (defun org-insert-source-block (name language switches header)
   "Asks name, language, switches, header.

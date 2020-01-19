@@ -43,6 +43,7 @@
     nix-mode
     nlinum
     nov
+    org-bullets
     paredit
     projectile
     ranger

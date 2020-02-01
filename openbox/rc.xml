@@ -45,6 +45,18 @@
          'Active' - where the active window is -->
   </placement>
 
+  <desktops>
+    <number>4</number>
+    <firstdesk>1</firstdesk>
+    <popupTime>0</popupTime>
+    <names>
+      <name>Firefox</name>
+      <name>Misc</name>
+      <name>Emacs</name>
+      <name>Chromium</name>
+    </names>
+  </desktops>
+
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <keybind key="W-d">
@@ -57,7 +69,25 @@
     </keybind>
 
     <!-- snap windows to screen halves -->
-    <keybind key="W-Left">
+    <keybind key="C-A-s">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>25%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="C-A-f">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>75%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="C-A-Left">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>0</x>
@@ -66,7 +96,25 @@
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="W-Right">
+    <keybind key="C-A-d">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>25%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="C-A-g">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>75%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="C-A-Right">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>-0</x>
@@ -75,7 +123,7 @@
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="W-Up">
+    <keybind key="C-A-Up">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>0</x>
@@ -84,7 +132,7 @@
         <height>50%</height>
       </action>
     </keybind>
-    <keybind key="W-Down">
+    <keybind key="C-A-Down">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>0</x>
@@ -93,9 +141,19 @@
         <height>50%</height>
       </action>
     </keybind>
+    <keybind key="C-A-c">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+      </action>
+    </keybind>
 
     <!-- keyboard shortcuts to minimize and maximize -->
     <keybind key="W-k">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="C-A-Return">
       <action name="ToggleMaximize"/>
     </keybind>
     <keybind key="W-j">
@@ -119,12 +177,12 @@
     </keybind>
 
     <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Right">
+    <keybind key="W-l">
       <action name="DirectionalCycleWindows">
         <direction>right</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Left">
+    <keybind key="W-h">
       <action name="DirectionalCycleWindows">
         <direction>left</direction>
       </action>
@@ -140,6 +198,54 @@
       </action>
     </keybind>
 
+    <!-- Change to Desktop -->
+    <keybind key="W-7">
+      <action name="Desktop">
+        <desktop>1</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-8">
+      <action name="Desktop">
+        <desktop>2</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-9">
+      <action name="Desktop">
+        <desktop>3</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-0">
+      <action name="Desktop">
+        <desktop>4</desktop>
+      </action>
+    </keybind>
+
+    <!-- Move Window to Desktop -->
+    <keybind key="W-S-7">
+      <action name="SendToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-8">
+      <action name="SendToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-9">
+      <action name="SendToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-0">
+      <action name="SendToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
+
+    <!-- Keybindings for running applications -->
+    <keybind key="W-z">
+      <action name="Reconfigure"/>
+    </keybind>
   </keyboard>
 
   <mouse>

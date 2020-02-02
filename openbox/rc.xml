@@ -69,7 +69,7 @@
     </keybind>
 
     <!-- snap windows to screen halves -->
-    <keybind key="C-A-s">
+    <keybind key="A-S-s">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>0</x>
@@ -78,7 +78,7 @@
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="C-A-f">
+    <keybind key="A-S-f">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>0</x>
@@ -87,7 +87,7 @@
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="C-A-Left">
+    <keybind key="A-S-Left">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>0</x>
@@ -96,7 +96,7 @@
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="C-A-d">
+    <keybind key="A-S-d">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>-0</x>
@@ -105,7 +105,7 @@
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="C-A-g">
+    <keybind key="A-S-g">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>-0</x>
@@ -114,7 +114,7 @@
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="C-A-Right">
+    <keybind key="A-S-Right">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>-0</x>
@@ -123,7 +123,7 @@
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="C-A-Up">
+    <keybind key="A-S-Up">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>0</x>
@@ -132,7 +132,7 @@
         <height>50%</height>
       </action>
     </keybind>
-    <keybind key="C-A-Down">
+    <keybind key="A-S-Down">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>0</x>
@@ -141,7 +141,7 @@
         <height>50%</height>
       </action>
     </keybind>
-    <keybind key="C-A-c">
+    <keybind key="A-S-c">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>center</x>

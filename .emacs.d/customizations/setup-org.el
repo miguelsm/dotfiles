@@ -18,3 +18,7 @@ sheader? ")
 #+END_SRC" language switches header))
   (forward-line -1)
   (goto-char (line-end-position)))
+
+;; allow multi-line emphasis https://emacs.stackexchange.com/a/13828
+(setcar (nthcdr 4 org-emphasis-regexp-components) 10)
+(org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)

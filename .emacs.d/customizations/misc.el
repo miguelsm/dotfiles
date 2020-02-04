@@ -31,3 +31,7 @@
                 (if (= (user-uid) 0) " # " " λ "))))
 
 (setq eshell-prompt-regexp "^[^#λ\n]* [#λ] ")
+
+;; pdf-tools HiDPI
+(setq pdf-view-use-scaling 1)
+(pdf-loader-install)

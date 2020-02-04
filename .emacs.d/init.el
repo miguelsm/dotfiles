@@ -45,6 +45,7 @@
     nov
     org-bullets
     paredit
+    pdf-tools
     projectile
     ranger
     smex

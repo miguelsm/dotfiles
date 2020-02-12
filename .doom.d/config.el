@@ -59,6 +59,9 @@
 ;; Editing
 ;;
 
+(setq doom-leader-key "C-c"
+      doom-leader-alt-key "C-c l")
+
 (global-set-key (kbd "C-h") 'delete-backward-char)
 
 ;;

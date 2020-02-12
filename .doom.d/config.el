@@ -118,6 +118,7 @@
 
 ;; enable hidpi
 (setq pdf-view-use-scaling 1)
+(setq pdf-view-resize-factor 1.05)
 (pdf-loader-install)
 
 ;;

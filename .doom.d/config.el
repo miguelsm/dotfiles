@@ -64,6 +64,9 @@
 
 (global-set-key (kbd "C-h") 'delete-backward-char)
 
+;; Search at point https://www.emacswiki.org/emacs/SearchAtPoint#toc3
+(global-set-key (kbd "C-S-s") 'isearch-forward-symbol-at-point)
+
 ;;
 ;; eshell
 ;;
@@ -90,7 +93,7 @@
 ;; multiple-cursors
 ;;
 
-(map! "C-c ;" 'mc/mark-more-like-this-extended)
+(global-set-key (kbd "C-c ;") 'mc/mark-more-like-this-extended)
 
 ;;
 ;; n3-mode

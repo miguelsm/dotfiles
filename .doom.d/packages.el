@@ -54,5 +54,6 @@
 (package! google-this)
 (package! magit)
 (package! n3-mode :recipe (:host github :repo "kurtjx/n3-mode-for-emacs"))
+(package! org-bullets)
 (package! org-noter)
 (package! pdf-tools)

@@ -113,6 +113,14 @@
        auto-mode-alist))
 
 ;;
+;; org-mode
+;;
+
+;; globally turn on Org Indent mode for all files
+;; https://orgmode.org/manual/Org-Indent-Mode.html#Org-Indent-Mode
+(setq org-startup-indented t)
+
+;;
 ;; pdf-tools
 ;;
 

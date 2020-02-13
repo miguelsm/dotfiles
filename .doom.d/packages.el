@@ -51,7 +51,9 @@
 ;; our package manager can't deal with; see raxod502/straight.el#279)
 ;(package! builtin-package :recipe (:branch "develop"))
 
+(package! auto-highlight-symbol)
 (package! google-this)
+(package! highlight-numbers)
 (package! magit)
 (package! n3-mode :recipe (:host github :repo "kurtjx/n3-mode-for-emacs"))
 (package! org-bullets)

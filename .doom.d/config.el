@@ -67,6 +67,12 @@
 ;; Search at point https://www.emacswiki.org/emacs/SearchAtPoint#toc3
 (global-set-key (kbd "C-S-s") 'isearch-forward-symbol-at-point)
 
+;; Highlight numbers
+(add-hook 'prog-mode-hook 'highlight-numbers-mode)
+
+;; Highlight current symbol
+(add-hook 'prog-mode-hook 'auto-highlight-symbol-mode)
+
 ;;
 ;; eshell
 ;;

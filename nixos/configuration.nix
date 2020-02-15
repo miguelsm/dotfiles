@@ -65,6 +65,7 @@
     docker
     docker_compose
     emacs
+    fd
     feh
     firefox
     firefox-beta-bin
@@ -103,6 +104,7 @@
     python
     qjackctl
     rclone
+    ripgrep
     rlwrap
     rxvt_unicode
     scaleway-cli
@@ -116,6 +118,7 @@
     stress
     supercollider
     texmacs
+    tigervnc
     tmux
     tree
     unzip
@@ -157,6 +160,9 @@
         sansSerif = [ "Source Sans Pro" ];
         serif = [ "Source Serif Pro" ];
       };
+      penultimate = {
+        enable = true;
+      };
     };
   };
 
@@ -186,6 +192,9 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  location.latitude = 51.5074;
+  location.longitude = 0.1278;
 
   services = {
     tlp = {
@@ -228,10 +237,14 @@
       };
 
       windowManager = {
-        default = "exwm";
-        exwm = {
+        default = "openbox";
+        openbox = {
           enable = true;
         };
+        # default = "exwm";
+        # exwm = {
+        #   enable = true;
+        # };
       };
 
       libinput = {
@@ -243,10 +256,7 @@
     compton = {
       enable = true;
       backend = "glx";
-      vSync = "opengl-swc";
-      extraOptions = ''
-      unredir-if-possible = false;
-    '';
+      vSync = true;
     };
 
     logind = {
@@ -255,8 +265,6 @@
 
     redshift = {
       enable = true;
-      latitude = "51.5074";
-      longitude = "0.1278";
       brightness = {
         day = "1.0";
         night = "0.8";
@@ -290,6 +298,6 @@
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should.
-  system.stateVersion = "18.09"; # Did you read the comment?
+  system.stateVersion = "19.09"; # Did you read the comment?
 
 }

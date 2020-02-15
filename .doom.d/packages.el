@@ -56,6 +56,7 @@
 (package! boon)
 (package! cider :pin "bfcf9157a970c9423fe27c5021f445b509e71280")
 (package! clj-refactor :pin "92d372393a031e5fa73ef926447afe72b574cb45")
+(package! desktop-environment)
 (package! google-this)
 (package! highlight-numbers)
 (package! magit)

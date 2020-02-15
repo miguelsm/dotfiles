@@ -59,3 +59,4 @@
 (package! org-bullets)
 (package! org-noter)
 (package! pdf-tools)
+(package! ranger)

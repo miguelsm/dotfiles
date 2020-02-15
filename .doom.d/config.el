@@ -141,3 +141,11 @@
 
 (projectile-global-mode)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+;;
+;; UI
+;;
+
+(display-time)
+(display-time-next-load-average)
+(display-battery-mode)

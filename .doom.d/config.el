@@ -67,12 +67,6 @@
 ;; Search at point https://www.emacswiki.org/emacs/SearchAtPoint#toc3
 (global-set-key (kbd "C-S-s") 'isearch-forward-symbol-at-point)
 
-;; Highlight numbers
-(add-hook 'prog-mode-hook 'highlight-numbers-mode)
-
-;; Highlight current symbol
-(add-hook 'prog-mode-hook 'auto-highlight-symbol-mode)
-
 ;;
 ;; eshell
 ;;
@@ -108,14 +102,14 @@
 (autoload 'n3-mode "n3-mode" "Major mode for OWL or N3 files" t)
 
 ;; Turn on font lock when in n3 mode
-(add-hook 'n3-mode-hook
-          'turn-on-font-lock)
+(add-hook 'n3-mode-hook 'turn-on-font-lock)
 
 (setq auto-mode-alist
       (append
        (list
         '("\\.n3" . n3-mode)
-        '("\\.owl" . n3-mode))
+        '("\\.owl" . n3-mode)
+        '("\\.ttl" . n3-mode))
        auto-mode-alist))
 
 ;;
@@ -125,6 +119,8 @@
 ;; globally turn on Org Indent mode for all files
 ;; https://orgmode.org/manual/Org-Indent-Mode.html#Org-Indent-Mode
 (setq org-startup-indented t)
+
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode t)))
 
 ;;
 ;; pdf-tools
@@ -136,11 +132,27 @@
 (pdf-loader-install)
 
 ;;
+;; prog-mode
+;;
+
+(add-hook 'prog-mode-hook 'highlight-numbers-mode)
+(add-hook 'prog-mode-hook 'auto-highlight-symbol-mode)
+
+;;
 ;; projectile
 ;;
 
 (projectile-global-mode)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+;;
+;; smartparens
+;;
+
+(sp-use-paredit-bindings)
+(add-hook 'clojure-mode-hook #'smartparens-strict-mode)
+(add-hook 'emacs-lisp-mode-hook #'smartparens-strict-mode)
+(add-hook 'js-mode-hook #'smartparens-strict-mode)
 
 ;;
 ;; UI

@@ -135,6 +135,7 @@
 ;; smartparens
 ;;
 
+(sp-use-paredit-bindings)
 (add-hook 'clojure-mode-hook #'smartparens-strict-mode)
 (add-hook 'emacs-lisp-mode-hook #'smartparens-strict-mode)
 (add-hook 'js-mode-hook #'smartparens-strict-mode)

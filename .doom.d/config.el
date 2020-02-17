@@ -104,11 +104,9 @@
 ;; org-mode
 ;;
 
-;; globally turn on Org Indent mode for all files
-;; https://orgmode.org/manual/Org-Indent-Mode.html#Org-Indent-Mode
 (setq org-startup-indented t)
-
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode t)))
+(setq org-tags-column 70)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 ;;
 ;; pdf-tools

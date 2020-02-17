@@ -52,10 +52,6 @@
 ;; they are implemented.
 
 ;;
-;; Customizations
-;;
-
-;;
 ;; eshell
 ;;
 
@@ -148,6 +144,12 @@
 (display-time)
 (display-time-next-load-average)
 (display-battery-mode)
+
+;;
+;; Customizations
+;;
+
+(setq-default fill-column 70)
 
 ;;
 ;; Key bindings

@@ -56,18 +56,6 @@
 ;;
 
 ;;
-;; Editing
-;;
-
-(setq doom-leader-key "C-c"
-      doom-leader-alt-key "C-c l")
-
-(global-set-key (kbd "C-h") 'delete-backward-char)
-
-;; Search at point https://www.emacswiki.org/emacs/SearchAtPoint#toc3
-(global-set-key (kbd "C-S-s") 'isearch-forward-symbol-at-point)
-
-;;
 ;; eshell
 ;;
 
@@ -149,7 +137,6 @@
 ;; smartparens
 ;;
 
-(sp-use-paredit-bindings)
 (add-hook 'clojure-mode-hook #'smartparens-strict-mode)
 (add-hook 'emacs-lisp-mode-hook #'smartparens-strict-mode)
 (add-hook 'js-mode-hook #'smartparens-strict-mode)
@@ -161,3 +148,22 @@
 (display-time)
 (display-time-next-load-average)
 (display-battery-mode)
+
+;;
+;; Key bindings
+;;
+
+(setq doom-leader-alt-key "C-c"
+      doom-localleader-alt-key "C-c l")
+
+(map! :map general-override-mode-map
+
+      ;; search at point https://www.emacswiki.org/emacs/SearchAtPoint#toc3
+      "C-S-s" #'isearch-forward-symbol-at-point
+
+      ;; fix conflict between org-mode and smartparens
+      "M-<down>" #'org-metadown
+      "M-<up>" #'org-metaup
+
+      "C-h" #'delete-backward-char
+      "M-<SPC>" #'just-one-space)

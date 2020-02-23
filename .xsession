@@ -21,5 +21,5 @@ keynav &
 #xinput --disable 12 &
 
 # Start Emacs
-exec dbus-launch --exit-with-session emacs
-#exec openbox
+#exec dbus-launch --exit-with-session emacs
+exec openbox

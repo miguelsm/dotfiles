@@ -17,7 +17,7 @@ xrdb -load ~/.Xresources
 xinput --set-prop 10 "libinput Natural Scrolling Enabled" 1 &
 setxkbmap us -variant colemak -option ctrl:nocaps -option altwin:meta_alt &
 xbanish &
-keynav &
+#keynav &
 #xinput --disable 12 &
 
 # Start Emacs

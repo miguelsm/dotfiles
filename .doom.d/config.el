@@ -101,7 +101,6 @@
 ;;
 
 (setq org-bullets-bullet-list '("◉" "○" "●" "▶" "★" "◆" "✸"))
-(setq org-startup-indented t)
 (setq org-tags-column 70)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 

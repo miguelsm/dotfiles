@@ -242,6 +242,29 @@
       </action>
     </keybind>
 
+    <!-- Media keys -->
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute"><execute>amixer set Master 5%-</execute></action>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute"><execute>amixer set Master 5%+</execute></action>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute"><execute>amixer set Master toggle</execute></action>
+    </keybind>
+
+    <!-- Screen brightness -->
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <command>brightnessctl set 5%+</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <command>brightnessctl set 5%-</command>
+      </action>
+    </keybind>
+
     <!-- Keybindings for running applications -->
     <keybind key="W-z">
       <action name="Reconfigure"/>

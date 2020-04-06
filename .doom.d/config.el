@@ -52,6 +52,15 @@
 ;; they are implemented.
 
 ;;
+;; clojure
+;;
+
+;; Aggressive indent mode for Clojure
+(add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+;; https://github.com/Malabarba/aggressive-indent-mode/issues/46#issuecomment-97706450
+(remove-hook 'aggressive-indent-modes-to-prefer-defun 'clojure-mode)
+
+;;
 ;; eshell
 ;;
 
@@ -117,8 +126,9 @@
 ;; prog-mode
 ;;
 
-(add-hook 'prog-mode-hook 'highlight-numbers-mode)
 (add-hook 'prog-mode-hook 'auto-highlight-symbol-mode)
+(add-hook 'prog-mode-hook 'highlight-numbers-mode)
+(add-hook 'prog-mode-hook 'subword-mode)
 
 ;;
 ;; projectile
@@ -167,4 +177,5 @@
       "M-<up>" #'org-metaup
 
       "C-h" #'delete-backward-char
+      "C-j" #'newline
       "M-<SPC>" #'just-one-space)

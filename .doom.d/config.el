@@ -109,9 +109,11 @@
 ;; org-mode
 ;;
 
-(setq org-bullets-bullet-list '("◉" "○" "●" "▶" "★" "◆" "✸"))
-(setq org-tags-column 70)
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(after! org
+  (setq org-bullets-bullet-list '("◉" "○" "●" "▶" "★" "◆" "✸")
+        org-startup-indented nil
+        org-tags-column 70)
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 ;;
 ;; pdf-tools

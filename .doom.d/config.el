@@ -113,7 +113,14 @@
   (setq org-bullets-bullet-list '("◉" "○" "●" "▶" "★" "◆" "✸")
         org-startup-indented nil
         org-tags-column 70)
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+  ;; org-protocol
+  (setq org-protocol-default-template-key "L")
+  (setq org-capture-templates
+        `(("p" "Protocol" entry (file+headline "~/index.org" "Browser tabs")
+           "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
+          ("L" "Protocol Link" entry (file+headline "~/index.org" "Browser tabs")
+           "* %? [[%:link][%:description]] \nCaptured On: %U"))))
 
 ;;
 ;; pdf-tools
@@ -181,3 +188,9 @@
       "C-h" #'delete-backward-char
       "C-j" #'newline
       "M-<SPC>" #'just-one-space)
+
+;;
+;; Start server
+;;
+
+(server-start)

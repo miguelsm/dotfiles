@@ -166,6 +166,12 @@
 (add-hook 'js-mode-hook #'smartparens-strict-mode)
 
 ;;
+;; undo-tree
+;;
+
+(global-undo-tree-mode)
+
+;;
 ;; UI
 ;;
 

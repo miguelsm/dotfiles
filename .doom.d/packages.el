@@ -62,3 +62,4 @@
 (package! org-protocol)
 (package! pdf-tools)
 (package! ranger)
+(package! undo-tree)

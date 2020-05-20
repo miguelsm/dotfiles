@@ -150,6 +150,13 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;;
+;; rainbow-delimiters
+;;
+
+(remove-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
+(remove-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
+
+;;
 ;; smartparens
 ;;
 

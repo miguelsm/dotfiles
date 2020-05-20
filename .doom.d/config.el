@@ -110,6 +110,9 @@
 ;;
 
 (after! org
+  (map! :map org-mode-map
+        "C-a"  #'org-beginning-of-line)
+  ;; org-bullets
   (setq org-bullets-bullet-list '("◉" "○" "●" "▶" "★" "◆" "✸")
         org-startup-indented nil
         org-tags-column 70)

@@ -61,7 +61,5 @@
 (package! n3-mode :recipe (:host github :repo "kurtjx/n3-mode-for-emacs"))
 (package! org-bullets)
 (package! org-noter)
-(package! org-protocol)
 (package! pdf-tools)
 (package! ranger)
-(package! undo-tree)

@@ -51,14 +51,36 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
-;;
-;; clojure
-;;
+(after! clojure-mode
+  (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+  ;; https://github.com/Malabarba/aggressive-indent-mode/issues/46#issuecomment-97706450
+  (remove-hook 'aggressive-indent-modes-to-prefer-defun 'clojure-mode)
 
-;; Aggressive indent mode for Clojure
-(add-hook 'clojure-mode-hook #'aggressive-indent-mode)
-;; https://github.com/Malabarba/aggressive-indent-mode/issues/46#issuecomment-97706450
-(remove-hook 'aggressive-indent-modes-to-prefer-defun 'clojure-mode)
+  (add-hook 'clojure-mode-hook #'smartparens-strict-mode)
+  (remove-hook 'clojure-mode-hook #'rainbow-delimiters-mode))
+
+(after! elisp-mode
+  (add-hook 'emacs-lisp-mode-hook #'smartparens-strict-mode)
+  (remove-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode))
+
+(after! js2-mode
+  (add-hook 'js-mode-hook #'smartparens-strict-mode))
+
+(after! org
+  (map! :map org-mode-map
+        "C-a"  #'org-beginning-of-line)
+  ;; org-bullets
+  (setq org-bullets-bullet-list '("◉" "○" "●" "▶" "★" "◆" "✸")
+        org-startup-indented nil
+        org-tags-column 70)
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+  ;; org-protocol
+  (setq org-protocol-default-template-key "L")
+  (setq org-capture-templates
+        `(("p" "Protocol" entry (file+headline "~/index.org" "Browser tabs")
+           "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
+          ("L" "Protocol Link" entry (file+headline "~/index.org" "Browser tabs")
+           "* %? [[%:link][%:description]] \nCaptured On: %U"))))
 
 ;;
 ;; eshell
@@ -106,26 +128,6 @@
        auto-mode-alist))
 
 ;;
-;; org-mode
-;;
-
-(after! org
-  (map! :map org-mode-map
-        "C-a"  #'org-beginning-of-line)
-  ;; org-bullets
-  (setq org-bullets-bullet-list '("◉" "○" "●" "▶" "★" "◆" "✸")
-        org-startup-indented nil
-        org-tags-column 70)
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-  ;; org-protocol
-  (setq org-protocol-default-template-key "L")
-  (setq org-capture-templates
-        `(("p" "Protocol" entry (file+headline "~/index.org" "Browser tabs")
-           "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
-          ("L" "Protocol Link" entry (file+headline "~/index.org" "Browser tabs")
-           "* %? [[%:link][%:description]] \nCaptured On: %U"))))
-
-;;
 ;; pdf-tools
 ;;
 
@@ -150,26 +152,10 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;;
-;; rainbow-delimiters
-;;
-
-(remove-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
-(remove-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
-
-;;
 ;; smartparens
 ;;
 
 (sp-use-paredit-bindings)
-(add-hook 'clojure-mode-hook #'smartparens-strict-mode)
-(add-hook 'emacs-lisp-mode-hook #'smartparens-strict-mode)
-(add-hook 'js-mode-hook #'smartparens-strict-mode)
-
-;;
-;; undo-tree
-;;
-
-(global-undo-tree-mode)
 
 ;;
 ;; web-mode
@@ -181,7 +167,8 @@
   (setq web-mode-json-indent-offset 2)
   (setq web-mode-markup-indent-offset 2))
 
-(add-hook 'web-mode-hook  'my-web-mode-hook)
+(after! web-mode
+  (add-hook 'web-mode-hook 'my-web-mode-hook))
 
 ;;
 ;; UI

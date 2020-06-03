@@ -18,3 +18,4 @@ bind -m '^L=^[^L'
 #export TERM=rxvt-256color
 
 alias sdc='rlwrap npx shadow-cljs'
+alias bb='steam-run bb'

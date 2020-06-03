@@ -20,6 +20,7 @@ xbanish &
 conky &
 #keynav &
 #xinput --disable 12 &
+systemctl --user restart redshift &
 
 # Start Emacs
 #exec dbus-launch --exit-with-session emacs

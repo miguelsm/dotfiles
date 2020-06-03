@@ -37,12 +37,15 @@
 
   # Select internationalisation properties.
   i18n = {
-    consolePackages = [
+    defaultLocale = "en_US.UTF-8";
+  };
+
+  console = {
+    packages = [
       pkgs.terminus_font
     ];
-    consoleFont = "ter-132n";
-    consoleUseXkbConfig = true;
-    defaultLocale = "en_US.UTF-8";
+    font = "ter-132n";
+    useXkbConfig = true;
   };
 
   # Set your time zone.
@@ -62,6 +65,7 @@
     calibre
     chromium
     clojure
+    conky
     docker
     docker_compose
     emacs
@@ -76,12 +80,13 @@
     gocryptfs
     google-chrome
     htop
+    inkscape
     jack2Full
-    jdk
     keynav
     leiningen
     lsof
     maven
+    mesa
     mksh
     moreutils
     mpv
@@ -106,6 +111,7 @@
     rclone
     ripgrep
     rlwrap
+    rofi-unwrapped
     rxvt_unicode
     scaleway-cli
     scrot
@@ -131,6 +137,7 @@
     x2goclient
     xbanish
     xclip
+    xorg.xbacklight
     xorg.xmodmap
     xorg.xrandr
     zathura
@@ -173,9 +180,6 @@
 
   # Bluetooth
   hardware.bluetooth.enable = true;
-
-  # Backlight
-  hardware.brightnessctl.enable = true;
 
   # Steam
   hardware.opengl.driSupport32Bit = true;
@@ -224,20 +228,14 @@
       # dpi = 120;
 
       displayManager = {
-        slim = {
-          enable = true;
-          theme = pkgs.fetchurl {
-            url = "https://github.com/edwtjo/nixos-black-theme/archive/v1.0.tar.gz";
-            sha256 = "13bm7k3p6k7yq47nba08bn48cfv536k4ipnwwp1q1l2ydlp85r9d";
-          };
-        };
+        defaultSession = "none+openbox";
+        lightdm.background = "black";
         sessionCommands = ''
           source $HOME/.xsession
         '';
       };
 
       windowManager = {
-        default = "openbox";
         openbox = {
           enable = true;
         };
@@ -260,7 +258,7 @@
     };
 
     logind = {
-      lidSwitch = "hibernate";
+      lidSwitch = "suspend";
     };
 
     redshift = {
@@ -298,6 +296,6 @@
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should.
-  system.stateVersion = "19.09"; # Did you read the comment?
+  system.stateVersion = "20.03"; # Did you read the comment?
 
 }

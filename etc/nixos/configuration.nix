@@ -155,6 +155,7 @@
 
   fonts = {
     fonts = with pkgs; [
+      cascadia-code
       dejavu_fonts
       source-code-pro
       source-sans-pro

@@ -171,6 +171,13 @@
   location.longitude = 0.1278;
 
   services = {
+    cron = {
+      enable = true;
+      systemCronJobs = [
+        "*/5 * * * *      miguelsm    source /etc/profile && /etc/cron.d/battery-check.sh >> /tmp/cron.log 2>&1"
+      ];
+    };
+
     tlp = {
       enable = true;
     };

@@ -83,6 +83,13 @@
            "* %? [[%:link][%:description]] \nCaptured On: %U"))))
 
 ;;
+;; boon
+;;
+
+(require 'boon-colemak)
+(boon-mode)
+
+;;
 ;; eshell
 ;;
 

@@ -168,6 +168,7 @@
     </keybind>
     <keybind key="A-S-Tab">
       <action name="NextWindow">
+        <raise>yes</raise>
         <finalactions>
           <action name="Focus"/>
           <action name="Raise"/>

@@ -22,6 +22,8 @@
   boot.kernel.sysctl = {
     # Make the kernel reluctant to use swap.
     "vm.swappiness" = 5;
+    # Increase the amount of inotify watchers
+    "fs.inotify.max_user_watches" = 1048576;
   };
 
   networking.hostName = "mi"; # Define your hostname.

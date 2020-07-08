@@ -56,91 +56,60 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    abiword
     ack
+    acpi
     arandr
     bluez
     brightnessctl
     caddy
-    calibre
-    chromium
-    clojure
-    conky
+    cmake
     docker
     docker_compose
-    emacs
     fd
-    feh
-    firefox
-    firefox-beta-bin
-    gimp
-    gitFull
-    gnome3.adwaita-icon-theme
-    go
-    gocryptfs
-    google-chrome
+    gcc
     htop
-    inkscape
     jack2Full
-    keynav
-    leiningen
+    libnotify
     lsof
-    maven
     mesa
     mksh
     moreutils
-    mpv
-    mupdf
-    moreutils
     ncdu
-    nodejs-10_x
     ntfs3g
     openbox
     openvpn
     p7zip
-    pandoc
     pavucontrol
-    pcmanfm
-    pgcli
     pkgs.gnumake
-    postgresql
     pulsemixer
-    pwsafe
     python
+    python3
     qjackctl
-    rclone
     ripgrep
     rlwrap
-    rofi-unwrapped
-    rxvt_unicode
-    scaleway-cli
     scrot
     silver-searcher
     slock
     sshfs
-    sshuttle
     steam
     steam-run
     stress
-    supercollider
-    texmacs
     tigervnc
     tmux
     tree
     unzip
     urxvt_perls
+    usbutils
     vagrant
     vanilla-dmz
-    vim
     virtualbox
     wget
-    x2goclient
+    wmctrl
     xbanish
     xclip
     xorg.xbacklight
     xorg.xmodmap
     xorg.xrandr
-    zathura
     zile
   ];
 

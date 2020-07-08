@@ -19,30 +19,49 @@
   # changes in each release.
   home.stateVersion = "20.09";
 
-  home.packages = [
-    pkgs.acpi
-    pkgs.cascadia-code
-    pkgs.cksfv
-    pkgs.cmake
-    pkgs.comic-relief
-    pkgs.dunst
-    pkgs.gcc
-    pkgs.imagemagick
-    pkgs.libnotify
-    pkgs.libtool
-    pkgs.libvterm
-    pkgs.pencil
-    pkgs.python3
-    pkgs.scrcpy
-    pkgs.teams
-    pkgs.usbutils
-    pkgs.wmctrl
+  home.packages = with pkgs; [
+    abiword
+    android-studio
+    calibre
+    cascadia-code
+    chromium
+    cksfv
+    clojure
+    comic-relief
+    conky
+    emacs
+    feh
+    firefox
+    gimp
+    gitFull
+    gnome3.adwaita-icon-theme
+    go
+    gocryptfs
+    google-chrome
+    imagemagick
+    inkscape
+    keynav
+    leiningen
+    maven
+    mpv
+    mupdf
+    nodejs-10_x
+    pandoc
+    pcmanfm
+    pencil
+    pgcli
+    postgresql
+    pwsafe
+    rclone
+    redshift
+    rofi-unwrapped
+    rxvt_unicode
+    scaleway-cli
+    scrcpy
+    supercollider
+    teams
+    texmacs
+    vim
+    zathura
   ];
-
-  programs.emacs = {
-    enable = true;
-    extraPackages = epkgs: [
-      epkgs.vterm
-    ];
-  };
 }

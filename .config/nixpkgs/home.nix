@@ -29,6 +29,7 @@
     clojure
     comic-relief
     conky
+    dunst
     emacs
     feh
     firefox

@@ -21,6 +21,7 @@ conky &
 #keynav &
 #xinput --disable 12 &
 redshift -b 1.0:0.8 -l 51.5074:0.1278 -t 5500:3700 &
+dunst &
 
 # Start Emacs
 #exec dbus-launch --exit-with-session emacs

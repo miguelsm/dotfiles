@@ -23,6 +23,7 @@
         "ignoreModifierKeys": false,
         "toggleHelpMenu": [],
         "toggleSaka": [],
+        "hintChars": "ajskdlgheworuvncm",
         "openLink": [
           [
             {
@@ -51,7 +52,6 @@
         ],
         "openLinkInIncognitoWindow": [],
         "downloadLink": [],
-        "focusLink": [],
         "focusInput": [
           [
             {
@@ -72,7 +72,35 @@
             }
           ]
         ],
-        "hintChars": "ajskdlgheworuvncm",
+        "focusLink": [],
+        "goBack": [
+          [
+            {
+              "code": "KeyH",
+              "key": "H",
+              "shiftKey": true,
+              "ctrlKey": false,
+              "altKey": false,
+              "metaKey": false
+            }
+          ]
+        ],
+        "goForward": [
+          [
+            {
+              "code": "KeyU",
+              "key": "L",
+              "shiftKey": true,
+              "ctrlKey": false,
+              "altKey": false,
+              "metaKey": false
+            }
+          ]
+        ],
+        "nextPage": [],
+        "previousPage": [],
+        "goUp": [],
+        "goToRoot": [],
         "scrollDown": [
           [
             {
@@ -93,8 +121,30 @@
             }
           ]
         ],
-        "scrollLeft": [],
-        "scrollRight": [],
+        "scrollRight": [
+          [
+            {
+              "code": "KeyU",
+              "key": "l",
+              "shiftKey": false,
+              "ctrlKey": false,
+              "altKey": false,
+              "metaKey": false
+            }
+          ]
+        ],
+        "scrollLeft": [
+          [
+            {
+              "code": "KeyH",
+              "key": "h",
+              "shiftKey": false,
+              "ctrlKey": false,
+              "altKey": false,
+              "metaKey": false
+            }
+          ]
+        ],
         "scrollPageDown": [
           [
             {
@@ -166,34 +216,22 @@
         ],
         "scrollToLeft": [],
         "scrollToRight": [],
-        "goBack": [
-          [
-            {
-              "code": "KeyH",
-              "key": "H",
-              "shiftKey": true,
-              "ctrlKey": false,
-              "altKey": false,
-              "metaKey": false
-            }
-          ]
-        ],
-        "goForward": [
-          [
-            {
-              "code": "KeyU",
-              "key": "L",
-              "shiftKey": true,
-              "ctrlKey": false,
-              "altKey": false,
-              "metaKey": false
-            }
-          ]
-        ],
-        "nextPage": [],
-        "previousPage": [],
-        "goUp": [],
-        "goToRoot": [],
+        "zoomIn": [],
+        "zoomOut": [],
+        "zoomReset": [],
+        "newTab": [],
+        "restoreTab": [],
+        "duplicateTab": [],
+        "duplicateTabIncognito": [],
+        "newWindow": [],
+        "newIncognitoWindow": [],
+        "closeTab": [],
+        "closeOtherTabs": [],
+        "closeRightTabs": [],
+        "closeLeftTabs": [],
+        "refreshTab": [],
+        "refreshAllTabs": [],
+        "hardRefreshTab": [],
         "nextTab": [],
         "previousTab": [],
         "firstTab": [],
@@ -203,15 +241,9 @@
         "moveTabFirst": [],
         "moveTabLast": [],
         "moveTabNewWindow": [],
-        "closeTab": [],
-        "closeOtherTabs": [],
-        "closeLeftTabs": [],
-        "closeRightTabs": [],
-        "newTab": [],
-        "restoreTab": [],
-        "duplicateTab": [],
-        "newWindow": [],
-        "newIncognitoWindow": [],
+        "toggleMuteTab": [],
+        "toggleMuteAllTabs": [],
+        "togglePinTab": [],
         "switchWindow": [
           [
             {
@@ -220,15 +252,6 @@
             }
           ]
         ],
-        "zoomIn": [],
-        "zoomOut": [],
-        "zoomReset": [],
-        "refreshTab": [],
-        "refreshAllTabs": [],
-        "hardRefreshTab": [],
-        "toggleMuteTab": [],
-        "toggleMuteAllTabs": [],
-        "togglePinTab": [],
         "passOneKey": [
           [
             {

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+if pgrep xcape; then pkill xcape; fi;
+setxkbmap us -variant colemak -option ctrl:nocaps -option altwin:meta_alt && xset r rate 200 60 && xcape -e 'Control_L=Escape' # && xinput --set-prop 15 "libinput Natural Scrolling Enabled" 1

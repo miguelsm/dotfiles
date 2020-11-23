@@ -63,6 +63,7 @@
     teams
     texmacs
     vim
+    xcape
     zathura
   ];
 }

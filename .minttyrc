@@ -1,0 +1,41 @@
+if [ -z "$TMUX" ]; then
+  echo -ne   '\eP\e]10;#424242\a'  # Foreground   -> base00
+  echo -ne   '\eP\e]11;#FEFFE2\a'  # Background   -> base3
+  echo -ne   '\eP\e]12;#B85C57\a'  # Cursor       -> red
+  echo -ne  '\eP\e]4;0;#424242\a'  # black        -> Base02
+  echo -ne  '\eP\e]4;8;#002B36\a'  # bold black   -> Base03
+  echo -ne  '\eP\e]4;1;#B85C57\a'  # red          -> red
+  echo -ne  '\eP\e]4;9;#F2ACAA\a'  # bold red     -> orange
+  echo -ne  '\eP\e]4;2;#57864E\a'  # green        -> green
+  echo -ne '\eP\e]4;10;#98CE8F\a'  # bold green   -> base01 *
+  echo -ne  '\eP\e]4;3;#8F7634\a'  # yellow       -> yellow
+  echo -ne '\eP\e]4;11;#E8EF82\a'  # bold yellow  -> base00 *
+  echo -ne  '\eP\e]4;4;#2A8DC5\a'  # blue         -> blue
+  echo -ne '\eP\e]4;12;#A6DCF8\a'  # bold blue    -> base0 *
+  echo -ne  '\eP\e]4;5;#7572C0\a'  # magenta      -> magenta
+  echo -ne '\eP\e]4;13;#D0D0F7\a'  # bold magenta -> violet
+  echo -ne  '\eP\e]4;6;#B0ECED\a'  # cyan         -> cyan
+  echo -ne '\eP\e]4;14;#E2FFFF\a'  # bold cyan    -> base1 *
+  echo -ne  '\eP\e]4;7;#B7B19C\a'  # white        -> Base2
+  echo -ne '\eP\e]4;15;#EEFEFF\a'  # bold white   -> Base3
+else
+  echo -ne   '\ePtmux;\e\e]10;#424242\a\e\\'  # Foreground   -> base00
+  echo -ne   '\ePtmux;\e\e]11;#FEFFE2\a\e\\'  # Background   -> base3
+  echo -ne   '\ePtmux;\e\e]12;#B85C57\a\e\\'  # Cursor       -> red
+  echo -ne  '\ePtmux;\e\e]4;0;#424242\a\e\\'  # black        -> Base02
+  echo -ne  '\ePtmux;\e\e]4;8;#002B36\a\e\\'  # bold black   -> Base03
+  echo -ne  '\ePtmux;\e\e]4;1;#B85C57\a\e\\'  # red          -> red
+  echo -ne  '\ePtmux;\e\e]4;9;#F2ACAA\a\e\\'  # bold red     -> orange
+  echo -ne  '\ePtmux;\e\e]4;2;#57864E\a\e\\'  # green        -> green
+  echo -ne '\ePtmux;\e\e]4;10;#98CE8F\a\e\\'  # bold green   -> base01 *
+  echo -ne  '\ePtmux;\e\e]4;3;#8F7634\a\e\\'  # yellow       -> yellow
+  echo -ne '\ePtmux;\e\e]4;11;#E8EF82\a\e\\'  # bold yellow  -> base00 *
+  echo -ne  '\ePtmux;\e\e]4;4;#2A8DC5\a\e\\'  # blue         -> blue
+  echo -ne '\ePtmux;\e\e]4;12;#A6DCF8\a\e\\'  # bold blue    -> base0 *
+  echo -ne  '\ePtmux;\e\e]4;5;#7572C0\a\e\\'  # magenta      -> magenta
+  echo -ne '\ePtmux;\e\e]4;13;#D0D0F7\a\e\\'  # bold magenta -> violet
+  echo -ne  '\ePtmux;\e\e]4;6;#B0ECED\a\e\\'  # cyan         -> cyan
+  echo -ne '\ePtmux;\e\e]4;14;#E2FFFF\a\e\\'  # bold cyan    -> base1 *
+  echo -ne  '\ePtmux;\e\e]4;7;#B7B19C\a\e\\'  # white        -> Base2
+  echo -ne '\ePtmux;\e\e]4;15;#EEFEFF\a\e\\'  # bold white   -> Base3
+fi

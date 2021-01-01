@@ -1,0 +1,7 @@
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p curl jq
+
+for i in `seq ${1:-1}`
+do
+  curl -s https://airvpn.org/api/whatismyip/ | jq .airvpn
+done

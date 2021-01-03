@@ -9,7 +9,7 @@
     "Appearance": {},
     "Blacklist": {
       "default_copy_1602012895401": {
-        "blacklist": "remotedesktop.google.com"
+        "blacklist": "remotedesktop.google.com,stadia.google.com"
       }
     },
     "General": {
@@ -121,10 +121,7 @@
             }
           ]
         ],
-        "openLinkInBackgroundTab": [],
-        "openLinkInForegroundTab": [],
-        "openLinkInIncognitoWindow": [],
-        "openLinkInNewWindow": [
+        "openLinkInBackgroundTab": [
           [
             {
               "altKey": false,
@@ -136,6 +133,9 @@
             }
           ]
         ],
+        "openLinkInForegroundTab": [],
+        "openLinkInIncognitoWindow": [],
+        "openLinkInNewWindow": [],
         "passAllKeys": [],
         "passOneKey": [
           [

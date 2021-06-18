@@ -57,7 +57,44 @@
   (remove-hook 'aggressive-indent-modes-to-prefer-defun 'clojure-mode)
 
   (add-hook 'clojure-mode-hook #'smartparens-strict-mode)
-  (remove-hook 'clojure-mode-hook #'rainbow-delimiters-mode))
+  (remove-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
+  (add-to-list 'auto-mode-alist '("\\.edn\\'" . clojure-mode))
+
+  ;; https://docs.cider.mx/cider/0.24/cljs/configuration.html#enhanced-completion
+  (setq cider-enhanced-cljs-completion-p nil)
+
+  ;; Indentation of function forms:
+  ;; https://github.com/clojure-emacs/clojure-mode/blob/a14671e03c867c9d759ee9e59cdc5cecbf271245/README.md#indentation-of-function-forms
+  (setq clojure-indent-style 'always-indent)
+  (define-clojure-indent
+    (-> 0)
+    (->> 0)
+    (< 0)
+    (<= 0)
+    (= 0)
+    (> 0)
+    (>= 0)
+    (and 0)
+    (as-> 0)
+    (assoc 0)
+    (assoc-in 0)
+    (get 0)
+    (get-in 0)
+    (or 0)
+    (map 0)
+    (map-indexed 0)
+    (mapv 0)
+    (merge 0)
+    (not= 0)
+    (recur 0)
+    (reduce 0)
+    (reduce-kv 0)
+    (some 0)
+    (sort-by 0)
+    (str 0)
+    (swap!-> 0)
+    (update 0)
+    (update-in 0)))
 
 (after! elisp-mode
   (add-hook 'emacs-lisp-mode-hook #'smartparens-strict-mode)
@@ -65,6 +102,9 @@
 
 (after! js2-mode
   (add-hook 'js-mode-hook #'smartparens-strict-mode))
+
+;; (after! magit-mode
+;;   (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1))
 
 (after! org
   (map! :map org-mode-map
@@ -88,6 +128,15 @@
 
 (require 'boon-colemak)
 (boon-mode)
+;; (global-set-key (kbd "C-j") 'newline-and-indent)
+
+;;
+;; Company mode
+;;
+
+(global-company-mode)
+(global-set-key (kbd "C-M-/") 'dabbrev-expand)
+(global-set-key (kbd "M-/") 'company-complete)
 
 ;;
 ;; eshell
@@ -209,7 +258,8 @@
 
       "C-h" #'delete-backward-char
       "C-j" #'newline
-      "M-<SPC>" #'just-one-space)
+      "M-<SPC>" #'just-one-space
+      "C-x C-b" #'ibuffer)
 
 ;;
 ;; Start server
